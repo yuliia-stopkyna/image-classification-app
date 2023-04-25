@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block left_content %}
+  <h1 class="fw-bold mb-3 display-5">FLOWER IMAGE CLASSIFICATION</h1>
+  <p class="h3 mb-3">5 types of flowers:</p>
+  <ul class="fs-5">
+    <li>Daisy</li>
+    <li>Dandelion</li>
+    <li>Rose</li>
+    <li>Sunflower</li>
+    <li>Tulip</li>
+  </ul>
+{% endblock %}
+{% block write_content %}
+  <p class="h4 mb-3">Upload your image of one of these flowers and check the result!</p>
+  <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" class="form-control">
+      <input type="submit" value="Upload photo" class="mt-1 btn btn-primary">
+  </form>
+{% endblock %}

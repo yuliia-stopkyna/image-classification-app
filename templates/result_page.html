@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block left_content %}
+  <h2 class="fw-bold mb-2 display-4">This is {{ predicted_label }}</h2>
+  <p class="display-6">Confidence: {{ probability }}%</p>
+{% endblock %}
+{% block write_content %}
+  <div class="polaroid">
+    <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded image" style="width:100%">
+    <div class="polaroid-text">
+      <p class="fs-6 fw-bold">{{ predicted_label }}</p>
+    </div>
+  </div>
+{% endblock %}
